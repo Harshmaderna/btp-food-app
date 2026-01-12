@@ -28,7 +28,7 @@ const PORT = process.env.PORT || 5000;
   try {
     
     await sequelize.authenticate();
-    console.log("✅ Database connected successfully.");  
+    console.log("✅ Database connected successfully.");   
 
     await sequelize.sync();
     console.log("✅ All models synced successfully."); 
@@ -41,5 +41,5 @@ const PORT = process.env.PORT || 5000;
   } catch (error) {
     
     console.error("❌ Unable to connect to the database or sync models:", error.message);
-  }
+  } 
 })();

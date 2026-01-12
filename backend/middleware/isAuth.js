@@ -12,6 +12,7 @@ const isAuth = async(req, res, next) => {
         }
         
         req.userId = decodeToken.userId
+        next()
     } catch (error) {
         return res.status(500).json({message: "isAuth Error", error: error.message})
     }

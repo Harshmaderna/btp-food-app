@@ -47,7 +47,7 @@ const userController = {
         data: newUser,
       });
     } catch (error) {
-      console.log("Error", error.mesage);
+      console.log("Error", error.mesage);  
       return res
         .status(500)
         .json({ message: "internal server error", error: error.message });
