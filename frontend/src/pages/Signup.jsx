@@ -38,7 +38,7 @@ const Signup = () => {
         },
         { withCredentials: true }
       );
-      dispatch(setUserData(data))
+      dispatch(setUserData(data));
       setErr("");
       setLoading(false);
     } catch (error) {
@@ -65,7 +65,7 @@ const Signup = () => {
         },
         { withCredentials: true }
       );
-      dispatch(setUserData(data))
+      dispatch(setUserData(data));
     } catch (error) {
       console.log("❌ Google login failed:", error.message);
     }
@@ -171,7 +171,7 @@ const Signup = () => {
                 className="flex border rounded-lg px-3 py-2 text-center font-medium transition-colors"
                 onClick={() => setRole(r)}
                 style={
-                  role == r
+                  role == r 
                     ? { backgroundColor: primaryColor, color: "white" }
                     : { border: bordercolor, color: "#333" }
                 }
@@ -188,7 +188,11 @@ const Signup = () => {
           disabled={loading}
         >
           {" "}
-          {loading ? <ClipLoader size={20} className="text-green-500" /> : "signup"}
+          {loading ? (
+            <ClipLoader size={20} className="text-green-500" />
+          ) : (
+            "signup"
+          )}
         </button>
         {err && <p className="text-rose-500 text-center my-[10px]">*{err}</p>}
         <button

@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 import Home from "./pages/Home.jsx";
 
 const App = () => {
-  useGetCurrentUser();
+   useGetCurrentUser();
   const { userData } = useSelector((state) => state.user);
 
   return (

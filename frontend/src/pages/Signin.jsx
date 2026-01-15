@@ -32,7 +32,7 @@ const Signin = () => {
         },
         { withCredentials: true }
       );
-      dispatch(setUserData(res.data))
+      dispatch(setUserData(res.data));
       setErr("");
       setLoading(false);
     } catch (error) {
@@ -53,7 +53,7 @@ const Signin = () => {
         },
         { withCredentials: true }
       );
-      dispatch(setUserData(data))
+      dispatch(setUserData(data));
     } catch (error) {
       console.log("❌ Google login failed:", error.message);
     }
@@ -127,9 +127,13 @@ const Signin = () => {
           className={`w-full mt-4 flex items-center justify-center gap-2 border rounded-lg px-4 py-2 transition duration-200 hover:bg-[#e64323] cursor-pointer`}
           style={{ backgroundColor: primaryColor, color: "white" }}
           onClick={handleSignin}
-          disabled={loading} 
+          disabled={loading}
         >
-          {loading ? <ClipLoader size={20} className="text-green-500" /> : "signin"}
+          {loading ? (
+            <ClipLoader size={20} className="text-green-500" />
+          ) : (
+            "signin"
+          )}
         </button>
         {err && <p className="text-rose-500 text-center my-[10px]">*{err}</p>}
         <button
