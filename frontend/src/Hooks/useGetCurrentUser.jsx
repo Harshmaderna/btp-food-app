@@ -16,7 +16,7 @@ const useGetCurrentUser = () => {
         dispatch(setUserData(res.data));
         console.log(res.data);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
     };
     fetchUser();

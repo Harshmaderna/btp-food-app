@@ -6,9 +6,11 @@ import ForgotPassword from "./pages/ForgotPassword.jsx";
 import useGetCurrentUser from "./Hooks/useGetCurrentUser.jsx";
 import { useSelector } from "react-redux";
 import Home from "./pages/Home.jsx";
+import useGetCity from "./Hooks/useGetCity.jsx";
 
 const App = () => {
    useGetCurrentUser();
+   useGetCity();
   const { userData } = useSelector((state) => state.user);
 
   return (

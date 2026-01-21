@@ -8,7 +8,7 @@ const userController = {
     try {
       const { fullName, email, password, mobile, role } = req.body;
 
-      if (!fullName || !email || !password || !mobile || !role) {
+      if (!fullName || !email || !password || !mobile || !role) { 
         return res.status(400).json({ message: "All fields are required" });
       }
       if (password.length < 6) {
